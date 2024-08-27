@@ -12,7 +12,7 @@ pub fn main() {
 
     io::stdin().read_line(&mut number).expect("Failed to read line");
 
-    let number_cvt: i32 = number.trim().parse().expect("Please type a number!");
+    let number_cvt: i32 = number.trim().parse().expect("Failed to read line");
 
     preenche_arr(&mut arr, number_cvt);
 
