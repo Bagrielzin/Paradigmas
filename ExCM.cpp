@@ -36,6 +36,10 @@ public:
         cout << "Idade do aluno: " << this->idade << endl;
     }
 
+    void mostraMatricula(){
+        cout << "Matricula: " << this->matricula << endl;
+    }
+
 private:
     int matricula;  
 
@@ -65,6 +69,7 @@ int main(){
     p1.Idade();
     a.apresentar();
     a.Idade();
+    a.mostraMatricula();
     p2.apresentar();
     p2.Idade();
 
