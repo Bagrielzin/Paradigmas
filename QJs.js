@@ -6,39 +6,42 @@ class Animal {
   }
 
   printInfo() {
+    console.log("");
     console.log("Nome: " + this.nome);
     console.log("Idade: " + this.idade);
     console.log("Especie: " + this.especie);
   }
 }
 
-class Cachorro extends Animal{
-  constructor(nome, idade, especie, raca){
+class Cachorro extends Animal {
+  #raca;
+
+  constructor(nome, idade, especie, raca) {
     super(nome, idade, especie);
-    this.raca = raca;
+    this.#raca = raca;
   }
 
-  printInfo(){
+  printInfo() {
     super.printInfo();
-    console.log("Raça: " + this.raca);
+    console.log("Raça: " + this.#raca);
   }
 }
 
-class Gato extends Animal{
-  constructor(nome, idade, especie, cores){
+class Gato extends Animal {
+  constructor(nome, idade, especie, cores = []) {
     super(nome, idade, especie);
     this.cores = cores;
   }
 
-  printInfo(){
+  printInfo() {
     super.printInfo();
-    console.log("Cor: " + this.cores);
+    console.log("Cores: " + this.cores);
   }
-}  
+}
 
 let animal1 = new Animal("Cesar", 12, "Macaco");
 let animal2 = new Cachorro("Scooby", 8, "Canino", "Dogue Alemão");
-let animal3 = new Gato("Garfield", 2, "Felino", "Laranja")
+let animal3 = new Gato("Garfield", 2, "Felino", ["Laranja","Branco"]);
 animal1.printInfo();
 animal2.printInfo();
 animal3.printInfo();
